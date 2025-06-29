@@ -1,0 +1,26 @@
+# EDR Configuration
+edr:
+  agent_name: "SmartEDR-Agent"
+  log_level: "INFO"
+  
+monitoring:
+  file_paths:
+    - "C:\\Users"
+    - "C:\\Program Files"
+    - "C:\\Windows\\System32"
+  process_monitoring: true
+  network_monitoring: true
+  
+database:
+  type: "sqlite"
+  path: "data/edr.db"
+  
+alerts:
+  email_enabled: false
+  webhook_enabled: true
+  webhook_url: "http://localhost:5000/alerts"
+  
+ai:
+  enable_ml: true
+  model_path: "data/models/"
+  training_data_path: "data/training/"
